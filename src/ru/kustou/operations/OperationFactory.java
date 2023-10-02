@@ -1,6 +1,6 @@
 package ru.kustou.operations;
 
-import ru.kustou.operations.models.*;
+import ru.kustou.operations.elements.*;
 
 public class OperationFactory {
     public static IOperation getOperator(String value) {

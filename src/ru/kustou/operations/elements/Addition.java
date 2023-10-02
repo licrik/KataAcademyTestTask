@@ -1,4 +1,4 @@
-package ru.kustou.operations.models;
+package ru.kustou.operations.elements;
 
 
 import ru.kustou.numbers.models.Number;
