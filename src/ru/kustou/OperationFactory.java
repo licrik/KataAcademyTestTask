@@ -1,8 +1,6 @@
-package ru.kustou.operations;
+package ru.kustou;
 
-import ru.kustou.operations.elements.*;
-
-public class OperationFactory {
+class OperationFactory {
     public static IOperation getOperator(String value) {
         switch (value){
             case "+":

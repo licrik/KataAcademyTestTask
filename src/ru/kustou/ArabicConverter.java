@@ -1,8 +1,6 @@
-package ru.kustou.numbers.converters;
+package ru.kustou;
 
-import ru.kustou.numbers.models.ArabicNumber;
-
-public class ArabicConverter extends NumberConverter<ArabicNumber> {
+class ArabicConverter extends NumberConverter<ArabicNumber> {
 
     public ArabicConverter() {
         this.regularCorrect = "[0-9]+";

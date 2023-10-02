@@ -1,6 +1,6 @@
-package ru.kustou.numbers.models;
+package ru.kustou;
 
-public class RomanNumber extends Number {
+class RomanNumber extends Number {
     @Override
     public void setValue(int value) {
         if (value > 0) {

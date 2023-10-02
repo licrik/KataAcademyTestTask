@@ -1,11 +1,9 @@
-package ru.kustou.numbers.converters;
-
-import ru.kustou.numbers.models.RomanNumber;
+package ru.kustou;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RomanConverter extends NumberConverter<RomanNumber> {
+class RomanConverter extends NumberConverter<RomanNumber> {
 
     public RomanConverter() {
         this.regularCorrect = "[I-X]+";

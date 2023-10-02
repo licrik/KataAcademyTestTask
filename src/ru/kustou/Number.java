@@ -1,6 +1,6 @@
-package ru.kustou.numbers.models;
+package ru.kustou;
 
-public class Number {
+class Number {
     protected int value;
 
     public int getValue() {

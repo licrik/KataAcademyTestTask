@@ -1,12 +1,6 @@
 package ru.kustou;
 
 
-import ru.kustou.numbers.converters.NumberConverter;
-import ru.kustou.numbers.NumberConverterFactory;
-import ru.kustou.operations.OperationFactory;
-import ru.kustou.numbers.models.Number;
-import ru.kustou.operations.elements.IOperation;
-
 import java.util.ArrayList;
 import java.util.List;
 

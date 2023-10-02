@@ -1,8 +1,6 @@
-package ru.kustou.operations.elements;
+package ru.kustou;
 
-import ru.kustou.numbers.models.Number;
-
-public class Subtraction implements IOperation {
+class Subtraction implements IOperation {
     @Override
     public int action(Number first, Number second) {
         return first.getValue() - second.getValue();

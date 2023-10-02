@@ -1,8 +1,8 @@
-package ru.kustou.numbers.converters;
+package ru.kustou;
 
 import java.util.regex.Pattern;
 
-public abstract class NumberConverter<Number> {
+abstract class NumberConverter<Number> {
     protected String regularCorrect;
 
     public Number convertTo(String value) {
