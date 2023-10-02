@@ -1,4 +1,4 @@
-package ru.kustou.factories;
+package ru.kustou.numbers.converters;
 
 import java.util.regex.Pattern;
 

@@ -1,8 +1,12 @@
-package ru.kustou.factories;
+package ru.kustou.numbers;
+
+import ru.kustou.numbers.converters.ArabicConverter;
+import ru.kustou.numbers.converters.NumberConverter;
+import ru.kustou.numbers.converters.RomanConverter;
 
 import java.util.regex.Pattern;
 
-public class OperationConverter {
+public class NumberConverterFactory {
 
     public static NumberConverter getConverter(String value) {
         if (isRoman(value)) {

@@ -1,4 +1,4 @@
-package ru.kustou.numbers;
+package ru.kustou.numbers.models;
 
 public class ArabicNumber extends Number {
     @Override

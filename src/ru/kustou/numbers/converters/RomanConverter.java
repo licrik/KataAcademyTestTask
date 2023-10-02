@@ -1,6 +1,6 @@
-package ru.kustou.factories;
+package ru.kustou.numbers.converters;
 
-import ru.kustou.numbers.RomanNumber;
+import ru.kustou.numbers.models.RomanNumber;
 
 import java.util.HashMap;
 import java.util.Map;

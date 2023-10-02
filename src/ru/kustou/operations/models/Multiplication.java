@@ -1,9 +1,9 @@
-package ru.kustou.operators;
+package ru.kustou.operations.models;
 
 
-import ru.kustou.numbers.Number;
+import ru.kustou.numbers.models.Number;
 
-public class Multiplication implements Operator {
+public class Multiplication implements IOperation {
     @Override
     public int action(Number first, Number second) {
         return first.getValue() * second.getValue();

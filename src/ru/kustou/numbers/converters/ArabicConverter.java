@@ -1,6 +1,6 @@
-package ru.kustou.factories;
+package ru.kustou.numbers.converters;
 
-import ru.kustou.numbers.ArabicNumber;
+import ru.kustou.numbers.models.ArabicNumber;
 
 public class ArabicConverter extends NumberConverter<ArabicNumber> {
 

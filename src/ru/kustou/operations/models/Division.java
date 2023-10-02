@@ -1,8 +1,8 @@
-package ru.kustou.operators;
+package ru.kustou.operations.models;
 
-import ru.kustou.numbers.Number;
+import ru.kustou.numbers.models.Number;
 
-public class Division implements Operator {
+public class Division implements IOperation {
     @Override
     public int action(Number first, Number second) {
         if (second.getValue() == 0) throw new RuntimeException("Деление на 0");

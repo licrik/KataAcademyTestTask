@@ -1,9 +1,9 @@
-package ru.kustou.factories;
+package ru.kustou.operations;
 
-import ru.kustou.operators.*;
+import ru.kustou.operations.models.*;
 
-public class OperatorFactory {
-    public static Operator getOperator(String value) {
+public class OperationFactory {
+    public static IOperation getOperator(String value) {
         switch (value){
             case "+":
                 return new Addition();

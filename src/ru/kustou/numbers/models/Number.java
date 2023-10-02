@@ -1,4 +1,4 @@
-package ru.kustou.numbers;
+package ru.kustou.numbers.models;
 
 public class Number {
     protected int value;

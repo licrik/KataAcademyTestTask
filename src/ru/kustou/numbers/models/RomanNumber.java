@@ -1,4 +1,4 @@
-package ru.kustou.numbers;
+package ru.kustou.numbers.models;
 
 public class RomanNumber extends Number {
     @Override
@@ -6,7 +6,7 @@ public class RomanNumber extends Number {
         if (value > 0) {
             super.setValue(value);
         } else {
-            throw new RuntimeException("В римской системе нет чисел");
+            throw new RuntimeException("В римской системе нет отрицательных чисел");
         }
     }
 

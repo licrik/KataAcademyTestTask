@@ -1,18 +1,20 @@
 package ru.kustou;
 
 
-import ru.kustou.factories.NumberConverter;
-import ru.kustou.factories.OperationConverter;
-import ru.kustou.factories.OperatorFactory;
-import ru.kustou.numbers.Number;
-import ru.kustou.operators.Operator;
+import ru.kustou.numbers.converters.NumberConverter;
+import ru.kustou.numbers.NumberConverterFactory;
+import ru.kustou.operations.OperationFactory;
+import ru.kustou.numbers.models.Number;
+import ru.kustou.operations.models.IOperation;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    public static final int MAX_INPUT_VALUE = 10;
+
     public static void main(String[] args) {
-        System.out.println(calc("0 / 2"));
+        System.out.println(calc("10 / 2"));
         System.out.println(calc("1 / 2"));
         System.out.println(calc("VI / III"));
         //System.out.println(calc("I - II"));
@@ -23,10 +25,10 @@ public class Main {
 
     public static String calc(String input) {
         String[] arguments = splitInputString(input);
-        NumberConverter<Number> converter = OperationConverter.getConverter(arguments[0]);
+        NumberConverter<Number> converter = NumberConverterFactory.getConverter(arguments[0]);
 
         List<Number> numbers = getNumbers(arguments, converter);
-        List<Operator> operations = getOperations(arguments);
+        List<IOperation> operations = getOperations(arguments);
 
         int result = 0;
 
@@ -49,17 +51,21 @@ public class Main {
         List<Number> numbers = new ArrayList<>();
 
         for (int i = 0; i < value.length; i +=2) {
-            numbers.add(converter.convertTo(value[i]));
+            Number number = converter.convertTo(value[i]);
+
+            if (number.getValue() > MAX_INPUT_VALUE) throw new RuntimeException("Значение не может быть больше " + MAX_INPUT_VALUE);
+
+            numbers.add(number);
         }
 
         return numbers;
     }
 
-    private static List<Operator> getOperations(String[] value) {
-        List<Operator> operations = new ArrayList<>();
+    private static List<IOperation> getOperations(String[] value) {
+        List<IOperation> operations = new ArrayList<>();
 
         for (int i = 1; i < value.length; i += 2) {
-            operations.add(OperatorFactory.getOperator(value[i]));
+            operations.add(OperationFactory.getOperator(value[i]));
         }
 
         return operations;
