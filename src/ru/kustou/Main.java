@@ -7,20 +7,26 @@ import ru.kustou.operations.OperationFactory;
 import ru.kustou.numbers.models.Number;
 import ru.kustou.operations.elements.IOperation;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static final int MAX_INPUT_VALUE = 10;
+    private static final int MAX_INPUT_VALUE = 10;
 
-    public static void main(String[] args) {
-        System.out.println(calc("10 / 2"));
-        System.out.println(calc("1 / 2"));
-        System.out.println(calc("VI / III"));
-        //System.out.println(calc("I - II"));
-        //System.out.println(calc("I + 1"));
-        //System.out.println(calc("1"));
-        //System.out.println(calc("1 + 2 + 3"));
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+        while (true) {
+            System.out.println("Введите математическую оперцию или exit, для выхода");
+
+            String line = reader.readLine();
+            if (line.toLowerCase().contains("exit")) break;
+
+            System.out.println(calc(line));
+        }
     }
 
     public static String calc(String input) {
